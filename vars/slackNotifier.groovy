@@ -2,7 +2,7 @@
 
 def call(String buildResult) {
   if ( buildResult == "SUCCESS" ) {
-    slackSend color: "good", message: "Job: ${env.JOB_NAME} performed on Scrum: ${env.SCRUM_NUMBER} with buildnumber ${env.BUILD_NUMBER} was successful. (<${env.BUILD_URL}|Open>)"
+    slackSend color: "good", message: "Job: ${env.JOB_NAME} performed on Scrum: ${env.SCRUM_NUMBER} with buildnumber ${env.BUILD_NUMBER} was successful :fire: (<${env.BUILD_URL}|Open>)"
   }
   else if( buildResult == "FAILURE" ) { 
     slackSend color: "danger", message: "Job: ${env.JOB_NAME} performed on Scrum: ${env.SCRUM_NUMBER} with buildnumber ${env.BUILD_NUMBER} was failed. ${env.BUILD_URL}"
